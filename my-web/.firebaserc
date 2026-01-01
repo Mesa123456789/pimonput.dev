@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "pimonput-dev-webresume"
-  }
+    "default": "pimonput-dev-webresume",
+    "staging": "pimonput-dev-af320"
+  },
+  "targets": {},
+  "etags": {}
 }

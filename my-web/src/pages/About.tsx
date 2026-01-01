@@ -9,20 +9,18 @@ export default function About() {
   const { about, mainSkills, toolCategories } = aboutData;
 
   return (
-    <main className="text-gray-800">
-      {/* HERO */}
-      <section className="relative h-[85vh] flex items-center justify-center text-white">
+    <div className="text-gray-800 w-full">
+      {/* 1. HERO SECTION: ลบขอบออกให้กว้างเต็มจอ */}
+      <section className="relative h-[85vh] flex items-center justify-center text-white w-full">
         <HeroSlider images={about.heroImages} />
 
-        <div className="relative z-10 text-center px-6 translate-y-16 md:translate-y-60">
+        <div className="relative z-10 text-center px-4 translate-y-16 md:translate-y-60">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-2 drop-shadow-xl">
             {about.fullname}
           </h1>
-
           <p className="text-lg md:text-xl font-light max-w-2xl mx-auto opacity-90">
             {about.headline}
           </p>
-
           <div className="text-lg md:text-2xl font-medium text-white mt-6">
             <TypingText
               words={[
@@ -33,37 +31,39 @@ export default function About() {
               ]}
               typingSpeed={100}
               deletingSpeed={50}
-              delayBetweenWords={1200}
+              delayBetweenWords={1200} // แก้จาก pauseTime เป็น delayBetweenWords ให้ตรงตาม Component เดิม
             />
           </div>
         </div>
       </section>
 
-      {/* SKILLS */}
-      <section className="bg-gray-50 py-20 px-6 lg:px-20">
+      {/* 2. SKILLS SECTION: ปรับ Padding ให้ชิดขอบในมือถือ */}
+      <section className="bg-gray-50 py-20 px-4 md:px-12 lg:px-20">
         <SectionTitle
           title="MY SKILLS"
           subtitle="Blending creativity and technology to craft engaging digital experiences."
+          // ลบ align="center" ออกเพราะ Component SectionTitle ของคุณไม่มี Props นี้
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
           {mainSkills.map((skill) => (
             <div
               key={skill.title}
-              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition"
+              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition border border-blue-50"
             >
               <div className="text-4xl mb-3">{skill.icon}</div>
               <h3 className="text-xl font-semibold text-blue-700 mb-2">
                 {skill.title}
               </h3>
+              {/* แก้จาก skill.description เป็น skill.desc ให้ตรงตาม Data */}
               <p className="text-gray-600 text-sm">{skill.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* TOOLS */}
-      <section className="py-16 bg-gradient-to-b from-white to-blue-50 px-6">
+      {/* 3. TOOLS SECTION: ปรับ Padding ให้ขอบหายไป */}
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50 px-4 md:px-12 lg:px-20">
         <h2 className="text-2xl font-bold text-blue-600 mb-8">
           Tools & Technologies
         </h2>
@@ -102,6 +102,6 @@ export default function About() {
 
       <ProjectCarousel />
       <ContactSplit />
-    </main>
+    </div>
   );
 }

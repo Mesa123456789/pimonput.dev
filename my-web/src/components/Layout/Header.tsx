@@ -50,13 +50,13 @@ const Header = () => {
         </button>
 
         {/* เมนูหลัก */}
-        <ul
-          className={`flex flex-col md:flex-row gap-6 md:gap-8 absolute md:static bg-white/95 md:bg-transparent
-            left-0 w-full md:w-auto px-6 md:px-0 py-6 md:py-0 shadow-md md:shadow-none
-            transition-all duration-300 ease-in-out
-            ${menuOpen ? "top-[68px] opacity-100" : "top-[-400px] opacity-0 md:opacity-100"}
-          `}
-        >
+<ul
+  className={`flex flex-col md:flex-row gap-6 md:gap-8 absolute md:static bg-white/95 md:bg-transparent
+    left-0 w-full md:w-auto px-6 md:px-0 py-6 md:py-0 shadow-md md:shadow-none
+    transition-all duration-300 ease-in-out border-b md:border-none
+    ${menuOpen ? "top-[68px] opacity-100" : "top-[-400px] opacity-0 md:opacity-100"}
+  `}
+>
           {links.map((link) => (
             <li key={link.name} className="relative group text-center md:text-left">
               <Link

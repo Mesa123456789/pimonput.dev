@@ -15,7 +15,8 @@ const colors = ["#3B82F6", "#EF4444", "#F59E0B", "#8B5CF6", "#10B981"];
 
 export default function Experience() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-b from-white to-blue-50 py-20 px-6 overflow-hidden">
+    <section>
+    <main className="relative min-h-screen bg-gradient-to-b from-white to-blue-50 py-20 px-2 overflow-hidden">
       <div className="max-w-4xl mx-auto relative">
         {/* Header */}
         <SectionTitle
@@ -73,9 +74,8 @@ export default function Experience() {
           })}
         </div>
       </div>
-        <div className="mt-24"></div>
-      <ContactSplit />
-
-    </main>
+          </main>
+           <div > <ContactSplit /> </div>
+    </section>
   );
 }

@@ -29,34 +29,35 @@ export default function Competitions() {
   );
 
   return (
-    <section className="min-h-screen pt-28 px-6">
-      <SectionTitle
-        title="EVENT & COMPETITIONS"
-        subtitle="Competitions and awards from hackathons and creative projects"
-      />
-
-      {/* ===== Competitions ===== */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-6">Competitions & Awards</h2>
-        {renderGrid(competitionProjects)}
-      </section>
-
-      {/* ===== Events ===== */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-6">Events</h2>
-        {renderGrid(eventProjects)}
-      </section>
-
-      {activeProject && (
-        <ProjectModal
-          project={activeProject}
-          onClose={() => setActiveId(null)}
+    <section>
+      <section className="min-h-screen pt-28 px-6">
+        <SectionTitle
+          title="EVENT & COMPETITIONS"
+          subtitle="Competitions and awards from hackathons and creative projects"
         />
-      )}
-      <div className="mt-24"></div>
-<ContactSplit />
 
+        {/* ===== Competitions ===== */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold mb-6">Competitions & Awards</h2>
+          {renderGrid(competitionProjects)}
+        </section>
 
+        {/* ===== Events ===== */}
+        <section>
+          <h2 className="text-2xl font-semibold mb-6">Events</h2>
+          {renderGrid(eventProjects)}
+        </section>
+
+        {activeProject && (
+          <ProjectModal
+            project={activeProject}
+            onClose={() => setActiveId(null)}
+          />
+        )}
+      </section>
+      <div className="mt-24">
+        <ContactSplit />
+      </div>
     </section>
   );
 }

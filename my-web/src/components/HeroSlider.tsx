@@ -103,7 +103,7 @@ export default function HeroSlider({
           className="absolute inset-0 bg-cover bg-center will-change-transform"
           style={{
             backgroundImage: `url('${images[index]}')`,
-            transform: `translateY(${offsetY * 0.3}px) scale(1.05)`,
+            transform: `translateY(${offsetY * 0.3}px) scale(1)`,
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

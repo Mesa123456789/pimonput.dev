@@ -30,15 +30,15 @@ export default function ProjectCarousel() {
   }, [centerIndex]);
 
   return (
-    <section className="relative py-36 bg-gradient-to-b from-white to-blue-50 overflow-visible">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <h2 className="text-4xl font-extrabold text-center text-blue-600 mb-14">
-          Featured Projects
-        </h2>
-
-        <div
-          ref={containerRef}
-          className="flex gap-10 overflow-x-scroll scrollbar-hide px-[6vw] py-10 items-center relative"
+<section className="relative py-20 bg-gradient-to-b from-white to-blue-50 overflow-hidden"> 
+    {/* เปลี่ยน overflow-visible เป็น overflow-hidden เพื่อกันจอล้น */}
+    <div className="w-full mx-auto px-0">
+      <h2 className="text-3xl font-extrabold text-center text-blue-600 mb-8 px-4">
+        Featured Projects
+      </h2>
+       <div
+        ref={containerRef}
+        className="flex gap-6 overflow-x-auto scrollbar-hide px-[10vw] py-10 items-center relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -59,7 +59,7 @@ export default function ProjectCarousel() {
                   damping: 18,
                 }}
                 onClick={() => navigate("/projects")}
-                className={`min-w-[320px] md:min-w-[380px] transition-all duration-500 ${blur}`}
+                className={`min-w-[260px] md:min-w-[380px] transition-all duration-500 ${blur}`}
                 style={{ zIndex }}
               >
                 <div className="rounded-2xl bg-white border border-gray-200 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_45px_rgba(0,0,0,0.15)] overflow-hidden">

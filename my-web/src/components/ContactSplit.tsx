@@ -10,8 +10,7 @@ export default function ContactSplit() {
       <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-blue-50" />
 
       {/* CONTENT */}
-      <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-start px-6">
-        
+      <div className="relative w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start px-4 md:px-12">
         {/* LEFT COLUMN */}
         <motion.div
           initial={{ x: -80, opacity: 0 }}
@@ -47,20 +46,18 @@ export default function ContactSplit() {
                 <h4 className="text-xs font-semibold tracking-widest text-blue-600 mb-1">
                   EMAIL ME AT
                 </h4>
-                <p className="text-sm text-gray-600">
+                {/* เพิ่มคลาส break-all และปรับขนาด text ให้เล็กลงในมือถือ */}
+                <p className="text-[12px] sm:text-sm text-gray-600 break-all">
                   pimonput_t@cmu.ac.th
                 </p>
               </div>
 
-              {/* CALL */}
               <div className="bg-white rounded-xl border border-blue-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition p-6 text-center">
                 <Phone className="mx-auto w-6 h-6 text-blue-600 mb-2" />
                 <h4 className="text-xs font-semibold tracking-widest text-blue-600 mb-1">
                   CALL ME AT
                 </h4>
-                <p className="text-sm text-gray-600">
-                  (+66) 96 987 9688
-                </p>
+                <p className="text-sm text-gray-600">(+66) 96 987 9688</p>
               </div>
             </div>
 
@@ -91,7 +88,6 @@ export default function ContactSplit() {
         >
           <ContactSection />
         </motion.div>
-
       </div>
     </section>
   );

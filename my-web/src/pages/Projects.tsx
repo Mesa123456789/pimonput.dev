@@ -31,7 +31,8 @@ export default function Projects() {
   );
 
   return (
-    <section className="min-h-screen pt-28 px-6">
+    <section>
+    <section className="min-h-screen pt-28 px-4 md:px-12 lg:px-20 text-gray-800 w-full">
       <SectionTitle
         title="PROJECTS"
         subtitle="Turning ideas into interactive experiences through design, code, and creativity."
@@ -58,9 +59,11 @@ export default function Projects() {
         />
       )}
 
-
-       <div className="mt-24"></div>
-       <ContactSplit />
+     
     </section>
+     <div className="min-h-screen pt-28 px-0 md:px-12 lg:px-20"> <ContactSplit /> </div>
+    </section>
+
   );
+  
 }
