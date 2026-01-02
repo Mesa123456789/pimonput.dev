@@ -19,7 +19,7 @@ export default function MyResume() {
         transition={{ delay: 0.3, duration: 0.8 }}
       >
         <iframe
-          src="/docs/resume.pdf"
+          src="/docs/resume_pimonput.pdf"
           className="w-full h-[80vh]"
           title="Resume PDF Viewer"
         />

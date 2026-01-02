@@ -11,7 +11,7 @@ export default function About() {
   return (
     <div className="text-gray-800 w-full">
       {/* 1. HERO SECTION: ลบขอบออกให้กว้างเต็มจอ */}
-      <section className="relative h-[85vh] flex items-center justify-center text-white w-full">
+      <section className=" h-[100vh] flex items-center justify-center text-white w-full">
         <HeroSlider images={about.heroImages} />
 
         <div className="relative z-10 text-center px-4 translate-y-16 md:translate-y-60">

@@ -13,7 +13,7 @@ export const aboutData = {
   mainSkills: [
     {
       title: "Development",
-      desc: "Unity (C#), Unreal, Web (HTML/CSS/JS), Flutter & Firebase prototypes.",
+      desc: "Unity (C#), Unreal, Web, Flutter & Firebase.",
       icon: "💻",
     },
     {

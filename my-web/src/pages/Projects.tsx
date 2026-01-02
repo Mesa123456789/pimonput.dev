@@ -40,7 +40,7 @@ export default function Projects() {
 
       <section className="mb-16">
         <h2 className="text-2xl font-semibold mb-6">
-          Game Projects
+          Game & Web Projects
         </h2>
         {renderGrid(gameProjects)}
       </section>

@@ -216,6 +216,97 @@ A collaborative Unreal Engine project that supports both third-person and VR gam
       ],
     },
   },
+   {
+    id: "animals-trekking",
+    category: "game",
+    section: "main",
+    thumbnail: "/images/portfolio/modals/animaltrekking.png",
+    cardTitle: "Animals Trekking",
+    cardSubtitle: "Hybrid Casual · Unity (C#)",
+
+    modal: {
+      title: "Animals Trekking",
+      year: "2024",
+      aspect: "3x4",
+      media: [{ type: "video", src: "/videos/AnimalTrekking.mp4" }],
+      description: `
+A hybrid-casual mobile game that blends endless running, base building, and multiplayer racing.
+Players join an initiation-style run up Doi Suthep, dodging obstacles, collecting resources, and competing for the highest score each run while upgrading their camp.
+— Designed and implemented core gameplay systems, resource and upgrade mechanics, and multiplayer race flow.
+— Developed with Unity (C#). My role: Lead Programmer.
+      `.trim(),
+      tech: ["Unity", "C#", "Lead Programmer", "Mobile"],
+    },
+  },
+  {
+    id: "Resume Website",
+    category: "game",
+    section: "main",
+    thumbnail: "/images/Web/1_1.png",
+    cardTitle: "Resume Website",
+    cardSubtitle: "Frontend Developer · UX/UI Design",
+
+    modal: {
+      title: "Resume Website",
+      aspect: "16x9",
+      media: [
+        { type: "image", src: "/images/Web/1_1.png" },
+        { type: "image", src: "/images/Web/1_2.png" },
+        { type: "image", src: "/images/Web/1_3.png" },
+        { type: "image", src: "/images/Web/1_4.png" },
+        { type: "image", src: "/images/Web/1_5.png" },
+        { type: "image", src: "/images/Web/1_6.png" },
+      ],
+      description: `
+Designed and developed a modern portfolio website using React + TypeScript to showcase game development projects, hackathon awards, and professional experience. The site emphasizes a minimal glassmorphism UI, smooth animations, and clear UX flow.
+— Built using React, TypeScript, Tailwind CSS, Vite, and Firebase.
+— Focused on UX/UI, layout design, responsiveness, and content organization
+— Implemented contact form with backend email sending
+      `.trim(),
+      tech: [
+        "Lead Programmer",
+        "Frontend Developer",
+        "UX/UI Design",
+      ],
+    },
+  },
+    {
+    id: "Resume Website (prototype)",
+    category: "game",
+    section: "main",
+    thumbnail: "/images/Web/2_1.png",
+    cardTitle: "Resume Website (prototype)",
+    cardSubtitle: "Frontend Developer · UX/UI Design",
+
+    modal: {
+      title: "Resume Website (prototype)",
+      aspect: "16x9",
+      media: [
+        { type: "image", src: "/images/Web/2_1.png" },
+        { type: "image", src: "/images/Web/2_2.png" },
+        { type: "image", src: "/images/Web/2_3.png" },
+        { type: "image", src: "/images/Web/2_4.png" },
+        { type: "image", src: "/images/Web/2_5.png" },
+      ],
+      description: `
+Designed and developed my own resume website to showcase personal information, skills, and project portfolio. The website emphasizes clean visual design, structured content, and responsive layout for different screen sizes.
+— Built using HTML, CSS, JavaScript and Firebased
+— Focused on UX/UI, layout design, responsiveness, and content organization
+— Implemented contact form with backend email sending
+      `.trim(),
+      tech: [
+        "Lead Programmer",
+        "Frontend Developer",
+        "UX/UI Design",
+      ],
+      links: [
+        {
+          label: "Click here to view project presentation",
+          url: "https://mesa123456789.github.io/",
+        },
+      ],
+    },
+  },
   {
     id: "ggj-poster",
     category: "design",
@@ -233,6 +324,37 @@ Collaborated with a five-member team to design the official event poster for Glo
 — The poster was created with Adobe Illustrator under the theme “Lanna”.
     `.trim(),
       tech: ["Graphic Design", "Poster"],
+    },
+  },
+   {
+    id: "nouv-brand",
+    category: "design",
+    section: "main",
+    thumbnail: "/images/portfolio/nouv.png",
+    cardTitle: "Ad Graphic for NOUV Brands",
+    cardSubtitle: "Graphic Design · Event Branding",
+
+    modal: {
+      title: "Ad graphic for NOUV",
+      aspect: "3x4",
+      media: [
+        { type: "image", src: "/images/portfolio/modals/NOUV-2.png" },
+        { type: "image", src: "/images/portfolio/modals/NOUV-1.png" },
+        { type: "image", src: "/images/portfolio/modals/NOUV-3.png" },
+        { type: "video", src: "/videos/nouv2.MOV" },
+        { type: "video", src: "/videos/nouv1.MOV" },
+      ],
+      description: `
+Produced online fashion content and marketing visuals for the NOUV brand.
+— Responsibilities included designing promotional graphics and editing promotional videosto enhance online audience engagement.
+    `.trim(),
+      tech: ["Graphic Design", "Content Creator", "Video Editing", "Marketing"],
+      links: [
+        {
+          label: "Click here to watch more content created",
+          url: "https://drive.google.com/drive/folders/184dcqlS0J35qQg6bIYP-oI8KH-8K8vYs",
+        },
+      ],
     },
   },
   {
@@ -275,87 +397,7 @@ with warm–cool night lighting to bring the scene to life.
       ],
     },
   },
-  /*{
-    id: "excel-credit-tool",
-    category: "design",
-    section: "main",
-    thumbnail: "/images/portfolio/modals/dg1.png",
-    cardTitle: "Excel Credit Automation Tool",
-    cardSubtitle: "Automation · Data Management",
 
-    modal: {
-      title: "Excel Credit Automation Tool",
-      aspect: "16x9",
-      media: [{ type: "image", src: "/images/portfolio/modals/dg1.png" }],
-      description: `
-An Excel automation tool designed to support academic workflows at CAMT.
-
-The program streamlines course input, validates subject data, and automatically calculates total credits,
-reducing manual workload and minimizing human error.
-
-Built using Excel formulas, tables, data validation, and automated credit computation logic.
-    `.trim(),
-      tech: ["Excel Automation", "Data Validation", "Workflow Optimization"],
-      links: [
-        {
-          label: "Click here to view the full calculator",
-          url: "https://docs.google.com/spreadsheets/d/13VjnnPomD_A-SJUiVVYBLqgwIJ00GzURqiu5QU7cAWE/edit",
-        },
-      ],
-    },
-  },*/
-  {
-    id: "tgs-reel",
-    category: "design",
-    section: "main",
-    thumbnail: "/images/portfolio/modals/TGS-Cover.jpg",
-    cardTitle: "Thailand Game Show 2025 Reel",
-    cardSubtitle: "Video Editing · Event Showcase",
-
-    modal: {
-      title: "Thailand Game Show 2025 Student Reel",
-      aspect: "16x9",
-      media: [{ type: "video", src: "/videos/TGSFinal.mp4" }],
-      description: `
-Edited a highlight reel of Digital Game (DG) student projects to be showcased at Thailand Game Show 2025.
-— Responsibilities included selecting gameplay clips, arranging the sequence to match the event's pacing,
-synchronizing cuts with music, adding simple transitions, and exporting a show-ready video for the event screen.
-— This project demonstrates my experience in video editing and presenting game projects for public exhibitions.
-    `.trim(),
-      tech: ["Video Editing", "Premiere Pro", "CapCut", "Event Showcase"],
-    },
-  },
-  {
-    id: "nouv-brand",
-    category: "design",
-    section: "main",
-    thumbnail: "/images/portfolio/nouv.png",
-    cardTitle: "Ad Graphic for NOUV Brands",
-    cardSubtitle: "Graphic Design · Event Branding",
-
-    modal: {
-      title: "Ad graphic for NOUV",
-      aspect: "3x4",
-      media: [
-        { type: "image", src: "/images/portfolio/modals/NOUV-2.png" },
-        { type: "image", src: "/images/portfolio/modals/NOUV-1.png" },
-        { type: "image", src: "/images/portfolio/modals/NOUV-3.png" },
-        { type: "video", src: "/videos/nouv2.MOV" },
-        { type: "video", src: "/videos/nouv1.MOV" },
-      ],
-      description: `
-Produced online fashion content and marketing visuals for the NOUV brand.
-— Responsibilities included designing promotional graphics and editing promotional videosto enhance online audience engagement.
-    `.trim(),
-      tech: ["Graphic Design", "Content Creator", "Video Editing", "Marketing"],
-      links: [
-        {
-          label: "Click here to watch more content created",
-          url: "https://drive.google.com/drive/folders/184dcqlS0J35qQg6bIYP-oI8KH-8K8vYs",
-        },
-      ],
-    },
-  },
   {
     id: "esport-event-staff",
     category: "event",
@@ -393,6 +435,57 @@ and the Chiang Mai Municipality Esports League.
         {
           label: "Click here to view the Esport TikTok",
           url: "https://www.tiktok.com/@cmuesportstiktok",
+        },
+      ],
+    },
+  },
+    {
+    id: "tgs-reel",
+    category: "event",
+    section: "main",
+    thumbnail: "/images/portfolio/modals/TGS-Cover.jpg",
+    cardTitle: "Thailand Game Show 2025 Reel",
+    cardSubtitle: "Video Editing · Event Showcase",
+
+    modal: {
+      title: "Thailand Game Show 2025 Student Reel",
+      aspect: "16x9",
+      media: [{ type: "video", src: "/videos/TGSFinal.mp4" }],
+      description: `
+Edited a highlight reel of Digital Game (DG) student projects to be showcased at Thailand Game Show 2025.
+— Responsibilities included selecting gameplay clips, arranging the sequence to match the event's pacing,
+synchronizing cuts with music, adding simple transitions, and exporting a show-ready video for the event screen.
+— This project demonstrates my experience in video editing and presenting game projects for public exhibitions.
+    `.trim(),
+      tech: ["Video Editing", "Premiere Pro", "CapCut", "Event Showcase"],
+    },
+  },
+   {
+    id: "excel-credit-tool",
+    category: "event",
+    section: "main",
+    thumbnail: "/images/Web/3_1.png",
+    cardTitle: "Excel Credit Automation Tool",
+    cardSubtitle: "Automation · Data Management",
+
+    modal: {
+      title: "Excel Credit Automation Tool",
+      aspect: "16x9",
+      media: [
+        { type: "image", src: "/images/Web/3_1.png" },
+        { type: "image", src: "/images/Web/3_2.png" },
+        { type: "image", src: "/images/portfolio/modals/dg1.png" }],
+      description: `
+Developed an Excel-based scoring system for ROV esports competitions to calculate match results and manage tournament scores efficiently.
+— Automated data validation, score calculations, and ranking updates using Excel formulas and VBA macros.
+— This tool streamlined the scoring process, reduced manual errors, and improved overall tournament management efficiency.
+In addition, built an Excel-based course input and credit calculation program to automate subject data entry and total credit computation.  
+    `.trim(),
+      tech: ["Excel Automation", "Data Validation", "Workflow Optimization"],
+      links: [
+        {
+          label: "Click here to view the full calculator",
+          url: "https://docs.google.com/spreadsheets/d/13VjnnPomD_A-SJUiVVYBLqgwIJ00GzURqiu5QU7cAWE/edit",
         },
       ],
     },

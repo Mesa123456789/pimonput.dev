@@ -8,21 +8,18 @@ interface HeroSliderProps {
 
 export default function HeroSlider({
   images,
-  interval = 3200,
+  interval = 4000,
 }: HeroSliderProps) {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
   const [offsetY, setOffsetY] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const rafRef = useRef<number | null>(null);
-  const touchStartX = useRef<number | null>(null);
+
 
   /* ---------------- AUTO SLIDE ---------------- */
   const startTimer = () => {
-    if (paused) return;
     stopTimer();
-
     timerRef.current = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
     }, interval);
@@ -39,7 +36,7 @@ export default function HeroSlider({
     startTimer();
     return stopTimer;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [paused, interval]);
+  }, [interval]); // เอา paused ออกจาก dependency
 
   /* ---------------- SCROLL PARALLAX ---------------- */
   useEffect(() => {
@@ -57,24 +54,7 @@ export default function HeroSlider({
   }, []);
 
   /* ---------------- SWIPE ---------------- */
-  const onTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
 
-  const onTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-
-    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
-    if (Math.abs(deltaX) > 50) {
-      if (deltaX > 0) {
-        prevSlide();
-      } else {
-        nextSlide();
-      }
-    }
-
-    touchStartX.current = null;
-  };
 
   /* ---------------- MANUAL CONTROL ---------------- */
   const prevSlide = () => {
@@ -90,27 +70,31 @@ export default function HeroSlider({
   };
 
   return (
-    <div
-      className="absolute inset-0 overflow-hidden group"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-    >
+    <div className="absolute inset-0 overflow-hidden group">
+      {/* 1. เอา mode="wait" ออกเพื่อให้รูปใหม่ซ้อนทับรูปเก่าทันที */}
       <AnimatePresence>
         <motion.div
           key={index}
           className="absolute inset-0 bg-cover bg-center will-change-transform"
           style={{
             backgroundImage: `url('${images[index]}')`,
-            transform: `translateY(${offsetY * 0.3}px) scale(1)`,
+            // parallax ยังอยู่เหมือนเดิมตามที่คุณชอบ
+            transform: `translateY(${offsetY * 0.5}px)`,
           }}
+          // 2. ปรับ Initial เป็น 0 และ Animate เป็น 1 
+          // รูปใหม่จะค่อยๆ ชัดขึ้นบนรูปเก่าที่ค่อยๆ จางลง
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ 
+            duration: 1.5, // เพิ่มเวลาให้เบลนด์กันนานขึ้นเพื่อความนวล
+            ease: "easeInOut" 
+          }}
         />
       </AnimatePresence>
+
+      {/* Overlay: ปรับลดความเข้มลงนิดนึงเพื่อให้เห็นรูปชัดขึ้นถ้านิยมมินิมอล */}
+      <div className="absolute inset-0 bg-white/20" />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
@@ -145,6 +129,7 @@ export default function HeroSlider({
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {images.map((_, i) => (
           <button
+            key={i}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => {
               stopTimer();
@@ -152,8 +137,8 @@ export default function HeroSlider({
               startTimer();
             }}
             className={`w-2.5 h-2.5 rounded-full transition
-    ${i === index ? "bg-white scale-125" : "bg-white/40 hover:bg-white/70"}
-  `}
+              ${i === index ? "bg-white scale-125" : "bg-white/40 hover:bg-white/70"}
+            `}
           />
         ))}
       </div>
